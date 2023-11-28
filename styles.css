@@ -1,0 +1,45 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+h1 {
+    margin: 1rem auto;
+}
+
+label {
+
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+#url, #save-url {
+    display: block;
+    margin: 0.5rem 1rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    font-size: 1.0rem;
+}
+
+#saved-links {
+    margin: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+#url:placeholder-shown {
+    font-size: 1.0rem;
+    padding: 0.5rem;
+}
+
+#url:focus {
+    font-size: 1.0rem;
+    padding: 0.5rem;
+}

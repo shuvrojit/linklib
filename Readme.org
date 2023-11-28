@@ -1,0 +1,7 @@
+#+title: Linklib browser extension
+#+author: Shuvrojit Biswas
+
+
+* Intro
+
+Linklib is a browser extension for storing links.

@@ -20,7 +20,7 @@ label {
     font-size: 1.2rem;
 }
 
-#url, #save-url {
+input[type="submit"], #url, #save-url {
     display: block;
     margin: 0.5rem 1rem;
     height: 2.5rem;

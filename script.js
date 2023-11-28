@@ -20,7 +20,8 @@ function getFromLocalStorage () {
 function showLinks () {
   if (urls.length > 0) {
   urls.forEach((i) => {
-    savedLinks.innerHTML += `<li>${i} </li>`
+    savedLinks.innerHTML += `<li><a target="_blank" href="${
+      i}">${i} </a></li>`
  })
   }
 }
@@ -29,9 +30,11 @@ saveUrl.addEventListener("click", (e) => {
   e.preventDefault()
 
   const url = document.querySelector("#url")
-  urls.push(url.value)
-  url.value = ""
-  saveToLocalStorage()
-  savedLinks.replaceChildren()
-  showLinks()
-})
+  if (url.value.length > 0) {
+    urls.push(url.value)
+    url.value = ""
+    saveToLocalStorage()
+    savedLinks.replaceChildren()
+    showLinks()
+  }
+  })

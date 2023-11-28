@@ -3,6 +3,7 @@ const urls = []
 const saveUrl = document.querySelector("#save-url")
 const savedLinks = document.querySelector("#saved-links")
 const saveTab = document.querySelector("#save-tab")
+const deleteAll = document.querySelector("#delete-all")
 
 getFromLocalStorage()
 showLinks()
@@ -61,4 +62,9 @@ saveTab.addEventListener("click", (e) => {
     e.preventDefault()
     saveCurrentTab()
     runFunction()
+})
+
+deleteAll.addEventListener("click", () => {
+  urls.length = 0
+  runFunction()
 })

@@ -46,6 +46,7 @@ async function saveCurrentTab() {
     return
   }
   urls.push(tabUrl)
+  runFunction()
 }
 
 function runFunction() {
@@ -72,7 +73,6 @@ saveUrl.addEventListener("click", (e) => {
 saveTab.addEventListener("click", (e) => {
     e.preventDefault()
     saveCurrentTab()
-    runFunction()
 })
 
 deleteAll.addEventListener("click", () => {

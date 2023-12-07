@@ -29,12 +29,23 @@ function showLinks() {
     }
 }
 
-function saveCurrentTab() {
-    const tabUrl = document.URL
-    if (urls.includes(tabUrl)) {
-        return
-    }
-    urls.push(tabUrl)
+
+async function saveCurrentTab() {
+  // You can also use chrome API
+  // let queryOptions = { active: true, lastFocusedWindow: true };
+  // const tabs = await chrome.tabs.query(queryOptions, (tab) => {
+    // return tab
+  // })
+  const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
+
+  console.log(tab)
+
+  const tabUrl = await tab.url
+  // const tabUrl = document.URL
+  if (urls.includes(tabUrl)) {
+    return
+  }
+  urls.push(tabUrl)
 }
 
 function runFunction() {
